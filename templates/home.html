@@ -1,0 +1,65 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+
+ <!-- banner -->
+ <section class="banner_main">
+   <div class="container">
+      <div class="row d_flex">
+         <div class="col-md-5">
+            <div class="text-bg">
+               <h1>{{ user.first_name }} Bienvenido a<br> ArLyzer</h1>
+               <span>Analizador de Argumentos</span>
+               <p>Una herramienta amigable que te ayudara a evaluar tus argumentos y poder mejorarlos</p>
+               <a href="#service">Más</a>
+            </div>
+         </div>
+         <div class="col-md-7">
+            <div class="text-img">
+               <figure><img src="{% static 'images/imgbaner.png' %}" /></figure>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- end banner -->
+<!-- Services  -->
+<div id="service" class="Services">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>Una Herramienta Inteligente</h2>
+               <p>Aprende como funciona ArLyzer para que saques el mejor provecho. </p>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="Services-box">
+               <img src="{% static 'images/00011.png' %}" alt="#" />
+               <h3> Crea</h3>
+               <p>De manera facil crea tus ensays y obtendras tus resultados</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="Services-box">
+               <img src="{% static 'images/0022.png' %}" alt="#" />
+               <h3>Edita</h3>
+               <p>Trabajas con versiones diferente de tus ensayos</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="Services-box">
+               <img src="{% static 'images/0033.png' %}" alt="#" />
+               <h3>Mejora</h3>
+               <p>Obten los mejores arguemntos con ArLyzer</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end Servicess -->
+
+
+ {% endblock %}

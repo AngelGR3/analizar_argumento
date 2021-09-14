@@ -1,0 +1,369 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.80857;
+    font-weight: normal;
+    background-image: url('../images/fondo-login.jpg');
+}
+.header1 {
+    width: 100%;
+    padding: 10px 340px 10px 40px;
+    background-color: #184d89;
+}
+
+.logo a {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 40px;
+}
+
+.padding {
+    padding: 1rem !important
+}
+
+.user-card-full {
+    overflow: hidden
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px
+    
+}
+
+.bg-c-lite-green {
+    background-image: url(https://cdn.dribbble.com/users/25238/screenshots/14356612/media/df5cdc641a039e230e9e17acc0c7c8dc.gif);
+   
+  
+}
+
+.user-profile {
+    padding: 20px 0
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+.img-radius {
+    border-radius: 5px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.card .card-block p {
+    line-height: 8px
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px
+    }
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.card .card-block p {
+    line-height: 8px
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.text-muted {
+     color: #919aa3 !important;
+     display: inline-block;
+     overflow: hidden;
+     padding: .25rem 0;
+     max-width: calc(100% - .5rem);
+     outline: none;
+     border: none;
+     background: transparent;
+     vertical-align: top;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     cursor: pointer;
+     transition: all .2s;
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.f-w-600 {
+    font-weight: 580
+}
+.f-w-800 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.user-card-full .social-link li {
+    display: inline-block
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+
+
+.container-login100-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+.wrap-login100-form-btn {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  -moz-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  -webkit-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  -o-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  -ms-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+}
+
+.login100-form-bgbtn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #0c0f38;
+  background: -webkit-linear-gradient(right, #0c0f38, #fdd430, #0c0f38, #fdd430);
+  background: -o-linear-gradient(right, #0c0f38, #fdd430, #0c0f38, #fdd430);
+  background: -moz-linear-gradient(right, #0c0f38, #fdd430, #0c0f38, #fdd430);
+  background: linear-gradient(right, #0c0f38, #fdd430, #0c0f38, #fdd430);
+  top: 0;
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn {
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;}
+
+.wrap-login100-form-btn:hover .login100-form-bgbtn {
+  left: 0;
+}
+
+.containertabla {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+._2rt5p-container {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.fondo-registro
+{
+    background-image: url('/core/static/images/fondo-login.jpg') ;
+}
+
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #d9d9d9;
+  }
+  
+  .input1000 {
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.2;
+  
+    display: block;
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    padding: 0 7px 0 43px;
+  }
+  
+  
+  /*---------------------------------------------*/
+
+  /*//////////////////////////////////////////////////////////////////
+[ Social item ]*/
+.login100-social-item {
+    font-size: 25px;
+    color: #fff;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  
+  .login100-social-item:hover {
+    color: #fff;
+    background-color: #333333;
+  }
+
+
+.bg1 {background-color: #3b5998}
+.bg2 {background-color: #1da1f2}
+.bg3 {background-color: #ea4335}
+
+.flex-c-m {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+  /*//////////////////////////////////////////////////////////////////*/
+
+
+  .in {
+     display: inline-block;
+     overflow: hidden;
+     padding: .25rem 0;
+     max-width: calc(100% - .5rem);
+     outline: none;
+     border: none;
+     background: transparent;
+     vertical-align: top;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     font-weight: 700;
+     cursor: pointer;
+     transition: all .2s;
+}
+.box {
+    background-color: #e0e0e0;
+  }
+  
+  #one {
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    background: blue;
+  }
+
+  .premisa{
+      color: #35ea71;
+  }
+
+  .conclusion{
+      color: #1da1f2;
+  }
+
+  .area{
+    width:400px;height:100px;
+  }

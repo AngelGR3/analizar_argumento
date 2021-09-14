@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<div class="containertabla">
+    <br>
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-1 "><p>Versión</p></div>
+            <div class="col col-2">Titulo</div>
+            <div class="col col-3">Materia</div>
+            <div class="col col-4">Texto</div>
+            <div class="col col-5">Opciones</div>
+          </li>
+   
+  
+        {% if ensayos %}
+        {% for lista in ensayos %}
+        <li class="table-row">
+            <div class="col col-1" data-label="Num." >{{lista.id_ensayo}}</div>
+            <div class="col col-2" data-label="Titulo" >{{lista.titulo}}</div>
+            <div class="col col-3" data-label="Materia" >{{lista.materia}}</div>
+            <div class="col col-4" data-label="Texto">{{lista.texto}}</div>
+            <div class="col col-5" data-label="Texto"><a class="btn btn-primary" href="editar/{{ lista.id_ensayo }}">Editar</a> <a class="btn btn-danger" href="">Eliminar</a></div>
+  
+          </li>
+               
+        {% endfor %}
+
+        {% else %}
+        <h1>No hay registros</h1>
+
+        {% endif %}
+   
+    </ul>
+</div>   
+
+ {% endblock %}
