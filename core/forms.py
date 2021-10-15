@@ -11,7 +11,7 @@ class UserRegisterForm(UserCreationForm):
     first_name = forms.CharField(label="", widget=forms.TextInput(attrs={'class' : 'text-muted f-w-400'}), required=True) 
     last_name = forms.CharField(label="", widget=forms.TextInput(attrs={'class' : 'text-muted f-w-400'}), required=True)
     escuela = forms.CharField(label="", widget=forms.TextInput(attrs={'class' : 'text-muted f-w-400'}), required=True)
-    sexo = forms.CharField(label="", widget=forms.TextInput(attrs={'class' : 'text-muted f-w-400'}), required=True)
+    sexo = forms.CharField(label="", widget=forms.Select(attrs={'class' : 'text-muted f-w-400'}), required=True)
     fecha_cumple = forms.DateField(label="", widget=forms.DateTimeInput(attrs={'class' : 'text-muted f-w-400'}), required=True)
     email = forms.EmailField(label="", widget=forms.EmailInput(attrs={'class' : 'text-muted f-w-400'}), required=True)
     password1 = forms.CharField(label="", widget=forms.PasswordInput(attrs={'class' : 'text-muted f-w-400'}), required=True, )

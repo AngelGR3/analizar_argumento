@@ -1,55 +1,33 @@
 {% load static%}
-<head>
-<link rel="stylesheet" type="text/css" href="{% static 'css/cssuser.css' %}">
- <!-- basic -->
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <!-- mobile metas -->
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="viewport" content="initial-scale=1, maximum-scale=1">
- <!-- site metas -->
- <title>{% block title %} Argumento {% endblock %}</title>
- <meta name="keywords" content="">
- <meta name="description" content="">
- <meta name="author" content="">
- {% block extrastatic %}
- <!-- bootstrap css -->
- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
- <!-- style css -->
- <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
- <!-- Responsive-->
- <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
- <!-- fevicon -->
- <link rel="icon" href="{% static 'images/fevicon.png'%}" type="image/gif" />
- <!-- Scrollbar Custom CSS -->
- <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
- <!-- Tweaks for older IEs-->
- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-</head>
-{% endblock %}
 
-{% block navbar%}
-<div class="header">
-<div class="container">
-   <div class="row">
-      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-         <div class="full">
-            <div class="center-desk">
-               <div class="logo">
-               </div>
-                 <a href="/"><img src="{% static 'images/logo.png' %}" alt="#" /></a>
+<link rel="stylesheet" type="text/css" href="{% static 'css/cssuser.css' %}">
+<!-- bootstrap css -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+<body>
+   
+   
+{% block navbar %}   
+<div class="header1">
+   <div class="container">
+      <div class="row">
+         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+            <div class="full">
+               <div class="center-desk">
+                  <div class="logo">
+                     <a href="/"><img src="{% static 'images/logo.png'%}" alt="#" /></a>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-   </div>    
-</div>
-               
+   </div>      
+</div>         
 {% endblock %}
-
 {% block content %}
-<body>
+
+
  <form method="POST">
 
    <div class="page-content page-container" id="page-content">      
@@ -65,56 +43,83 @@
            </div>
            <div class="col-sm-8">
                <div class="card-block">
-                   <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Información</h6>
+                   <h6 class="m-b-20 p-b-5 b-b-default f-w-800">Registro</h6>
                    <div class="row">
                      {% csrf_token %}
                        <div class="col-sm-6">
-                           <p class="m-b-10 f-w-600">Usuario</p>
-                           {{ form.username }}
-                       </div>
+                           <div class="wrap-input100" data-validate = "Username is reauired">
+                              <p class="m-b-10 f-w-600">Usuario</p>
+                              {{ form.username }}
+                           </div>
+                        </div>
                        <div class="col-sm-6">
+                        <div class="wrap-input100" data-validate = "Username is reauired">
                            <p class="m-b-10 f-w-600">Nombre</p>
                            {{ form.first_name }}
+                        </div>   
                        </div>
                        <div class="col-sm-6">
-                       <br> <p class="m-b-10 f-w-600">Apellido</p>
-                        {{ form.last_name }}
+                        <div class="wrap-input100" data-validate = "Username is reauired">
+                          <br> <p class="m-b-10 f-w-600">Apellido</p>
+                           {{ form.last_name }}
+                        </div>  
                        </div>
                        <div class="col-sm-6">
-                          <br> <p class="m-b-10 f-w-600">Correo</p>
+                        <div class="wrap-input100" data-validate = "Username is reauired">
+                           <br> <p class="m-b-10 f-w-600">Correo</p>
                            {{ form.email }}
+                        </div>  
                        </div>
                        <div class="col-sm-6">
-                          <br>  <p class="m-b-10 f-w-600">Escuela</p>
-                          {{ form.escuela }}
+                        <div class="wrap-input100" data-validate = "Username is reauired">
+                           <br> <p class="m-b-10 f-w-600"> Escuela</p>
+                           {{ form.escuela }}
+                        </div>  
                        </div>
                        <div class="col-sm-6">
-                       <br> <p class="m-b-10 f-w-600">Fecha de Nacimiento</p>
-                        {{ form.fecha_cumple }}
+                        <div class="wrap-input100" data-validate = "Username is reauired">
+                           <br> <p class="m-b-10 f-w-600">Fecha de Nacimineto</p>
+                           <input class="text-muted f-w-400" type="date" id="start" name="fecha_cumple" value="2018-07-22">
+                        </div>  
                        </div>
                        <div class="col-sm-6">
-                        <br><p class="m-b-10 f-w-600">Sexo</p>
-                        {{ form.sexo }}
+                        <div class="wrap-input100" data-validate = "Username is reauired">
+                           <br> <p class="m-b-10 f-w-600">Sexo</p>
+                            <select name="sexo"  class="text-muted f-w-400" id="">
+                              <option value="masculino">selecciona</option>
+                              <option value="masculino">masculino</option>
+                              <option value="femenino">femenino</option>
+                              <option value="otro">otro</option>
+                           </select>
+                        </div>  
                        </div>
                        <div class="col-sm-6">
-                       <br> <p class="m-b-10 f-w-600">Contraseña</p>
-                        {{ form.password1 }}
+                        <div class="wrap-input100" data-validate = "Username is reauired">
+                           <br><p class="m-b-10 f-w-600">Contraseña</p>
+                           {{ form.password1 }}
+                        </div>  
                        </div>
-                       <br>
+                       <div class="col-sm-6">
+                        <div class="wrap-input100" data-validate = "Username is reauired">
+                           <br><p class="m-b-10 f-w-600">Contraseña</p>
+                           {{ form.password2 }}
+                        </div>  
+                       </div>
+                       
                        
                
                    </div>
-                   
-                   <br>
                        <div class="button mt-2 d-flex flex-row align-items-center">
-                       <button class="btn btn-sm btn-outline-primary w-100">Guardar</button> 
-                       <button class="btn btn-sm btn-primary w-100 ml-2">Eliminar Cuenta</button> </div>
+                       <button class="btn btn-sm btn-primary">Guardar</button> 
+                       <a class="btn btn-danger" href="/eliminar_usuario/">Eliminar</a>
+                    
+                    </div> 
+                  
+
+                       
+                    </div>
                    
-                   <ul class="social-link list-unstyled m-t-40 m-b-10">
-                       <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i class="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a></li>
-                       <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter" data-abc="true"><i class="mdi mdi-twitter feather icon-twitter twitter" aria-hidden="true"></i></a></li>
-                       <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="instagram" data-abc="true"><i class="mdi mdi-instagram feather icon-instagram instagram" aria-hidden="true"></i></a></li>
-                   </ul>
+                   
                </div>
            </div>
        </div>

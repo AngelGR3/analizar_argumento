@@ -79,19 +79,13 @@
                        <div class="col-sm-6">
                         <div class="wrap-input100" data-validate = "Username is reauired">
                            <br> <p class="m-b-10 f-w-600">Fecha de Nacimineto</p>
-                           <input class="text-muted f-w-400" type="date" id="start" name="fecha_cumple" value="2018-07-22">
-
+                           {{ form.fecha_cumple }}
                         </div>  
                        </div>
                        <div class="col-sm-6">
                         <div class="wrap-input100" data-validate = "Username is reauired">
                            <br> <p class="m-b-10 f-w-600">Sexo</p>
-                            <select name="sexo" class="text-muted f-w-400" id="">
-                              <option value="masculino">selecciona</option>
-                               <option value="masculino">masculino</option>
-                               <option value="masculino">femenino</option>
-                               <option value="masculino">otro</option>
-                            </select>
+                           {{ form.sexo }}
                         </div>  
                        </div>
                        <div class="col-sm-6">
@@ -113,27 +107,10 @@
                        <div class="button mt-2 d-flex flex-row align-items-center">
                           <br>
                           <br>
-                       <button class="btn btn-sm btn-primary w-100 ml-2">Registrar</button> </div> <br> 
+                       <button class="btn btn-sm btn-primary w-100 ml-2">Eliminar</button> </div> <br> 
 
-                       <div class="txt1 text-center p-t-54 p-b-20">
-                        <a href="accounts/login">
-                           Ya tengo Cuenta
-                        </a>
-                     </div>
-                     <br>
-	                <!--  <div class="flex-c-m">
-                       <a href="#" class="login100-social-item bg1">
-                        <i class="fa fa-facebook"></i>
-                       </a>
-   
-                     <a href="#" class="login100-social-item bg2">
-                        <i class="fa fa-twitter"></i>
-                     </a>
-            
-                     <a href="#" class="login100-social-item bg3">
-                        <i class="fa fa-google"></i>
-                     </a>
-                     </div>-->
+                       
+                    </div>
                    
                    
                </div>

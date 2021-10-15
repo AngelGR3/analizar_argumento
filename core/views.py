@@ -1,5 +1,7 @@
+from tkinter.constants import FALSE, NO, NONE
 from django import forms
 from django.db.models.base import Model
+from django.urls.resolvers import get_resolver
 from django.views.generic.edit import CreateView, UpdateView
 from .models import *
 from django.shortcuts import render, HttpResponse
@@ -19,14 +21,33 @@ class UsuarioRegistro (CreateView):
     template_name= "registro.html"
     success_url= reverse_lazy(home)
 
+def miperfil(request):
+    id = request.user.id
+    perfil = usuario.objects.get(id = id)  
+    form = UserRegisterForm()
+    if request.method == 'GET':
+        form = UserRegisterForm(instance=perfil)  
+    else:
+        form = UserRegisterForm(request.POST, instance=perfil)  
+        if form.is_valid():
+            form.save()
+            return redirect(home)
+         
+        
+    return render(request, 'usuariodetalles.html', {'form':form})    
+
+def eliminar_usuario(request):
+    id = request.user.id
+    perfil = usuario.objects.get(id = id)  
+    form = UserRegisterForm()
+    if request.method == 'GET':
+        form = UserRegisterForm(instance=perfil)  
+    if request.method == 'POST' :
+        perfil.delete()
+        return redirect ('')
+
+    return render(request, 'eliminarusuario.html', {'form':form})         
     
-
-
-class editar_usuario (UpdateView):
-    model= usuario
-    form_class = UpDateForm
-    template_name= "usuariodetalles.html"
-    success_url= reverse_lazy(home)     
 
 
 

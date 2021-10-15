@@ -1,16 +1,33 @@
 {% extends 'base/base.html' %}
-{% block content %}
 {% load static %}
+{% block content %}
 
- <!-- banner -->
- <section class="banner_main">
-   <div class="container">
+   
+<!-- banner -->
+<script>console.log("perro")</script>
+{% if messages %}
+   {% for m in messages %}
+       <script>
+         Swal.fire(
+         {position: 'top-end',
+         icon: 'success',
+         title: 'Ensayo Guardado',
+         showConfirmButton: false,
+         timer: 1800}
+)
+
+       </script>
+   {% endfor %}
+ {% endif %}   
+ <section class="banner_main">   
+  
+   <div class="container">  
       <div class="row d_flex">
          <div class="col-md-5">
             <div class="text-bg">
                <h1>{{ user.first_name }} Bienvenido a<br> ArLyzer</h1>
                <span>Analizador de Argumentos</span>
-               <p>Una herramienta amigable que te ayudara a evaluar tus argumentos y poder mejorarlos</p>
+               <p>Una herramienta amigable que te ayudará a evaluar tus argumentos y poder mejorarlos</p>
                <a href="#service">Más</a>
             </div>
          </div>
@@ -29,7 +46,7 @@
       <div class="row">
          <div class="col-md-12">
             <div class="titlepage">
-               <h2>Una Herramienta Inteligente</h2>
+               <h2>Una herramienta inteligente</h2>
                <p>Aprende como funciona ArLyzer para que saques el mejor provecho. </p>
             </div>
          </div>
@@ -39,27 +56,109 @@
             <div class="Services-box">
                <img src="{% static 'images/00011.png' %}" alt="#" />
                <h3> Crea</h3>
-               <p>De manera facil crea tus ensays y obtendras tus resultados</p>
+               <p>De manera fácil crea tus ensayos y obtendrás tus resultados.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
             <div class="Services-box">
                <img src="{% static 'images/0022.png' %}" alt="#" />
                <h3>Edita</h3>
-               <p>Trabajas con versiones diferente de tus ensayos</p>
+               <p>Guarda tu ensayo y sigues después.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
             <div class="Services-box">
                <img src="{% static 'images/0033.png' %}" alt="#" />
                <h3>Mejora</h3>
-               <p>Obten los mejores arguemntos con ArLyzer</p>
+               <p>Obtén los mejores argumentos con ArLyzer.</p>
             </div>
          </div>
       </div>
    </div>
 </div>
 <!-- end Servicess -->
+<div id="nosotros" class="why">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>¿Quiénes somos? </h2>
+               <span class="span">Investigadores</span>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div id="box_ho" class="why-box">
+               <i><img src="{% static 'images/aurelio.png' %}" alt="#" /></i>
+               <h3>Dr. Aurelio López López</h3>
+               <h1 class="indicador">Institución:</h1>
+               <p>Instituto Nacional de Astrofísica, Óptica y Electrónica, Puebla, México.</p>
+               <h1 class="indicador">Líneas de Investigación:</h1>
+               <p>Procesamiento de Información Textual, Recuperación de Información y PLN.</p>  
+               <h1 class="indicador">Contacto:</h1>
+               <p>📧Correo: allopez@inaoep.mx</p>
+               <p>📞Teléfono: +52(222)266.31.00</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="why-box">
+               <i><img src="{% static 'images/samuel.png' %}" alt="#" /></i>
+               <h3>Dr. Samuel González López</h3>
+               <h1 class="indicador">Institución:</h1>
+               <p>Universidad Tecnológica de Nogales, Sonora, México.</p>
+               <h1 class="indicador">Líneas de Investigación:</h1>
+               <p>Procesamiento de Lenguaje Natural, E- Learning, Tutores Inteligentes.</p>  
+               <h1 class="indicador">Contacto:</h1>
+               <p>📧Correo: sgonzalez@utnogales.edu.mx</p>
+               <p>📞Teléfono: +52(631)311-1830</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="why-box">
+               <i><img src="{% static 'images/jesus.png' %}" alt="#" /></i>
+               <h3>Dr. Jesús Miguel Garcia Gorrostieta</h3>
+               <h1 class="indicador">Institución:</h1>
+               <p>Universidad de la Sierra, Sonora México.</p>
+               <h1 class="indicador">Líneas de Investigación:</h1>
+               <p>Procesamiento de Lenguaje Natural, E- Learning, Tutores Inteligentes.</p>  
+               <h1 class="indicador">Contacto:</h1>
+               <p>📧Correo: jesusmiguelgarcia@gmail.com</p>
+               <p>📞Teléfono: +52(634) 342 9600</p>
+            </div>
+         </div>
+         
+      </div>
+      <div class="titlepage">
+         <span class="span">Desarrollador</span>
+      </div>
+      <div class="row">
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div id="box_ho" class="why-box">
+               <i><img src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png" alt="#" /></i>
+               <h3>Angel A. Guardado Ramos</h3>
+               <h1 class="indicador">Institución:</h1>
+               <p>Universidad de la Sierra, Sonora México.</p>
+               <h1 class="indicador">Líneas de Investigación:</h1> 
+               <h1 class="indicador">Contacto:</h1>
+               <p>📧Correo: angelguardador3@gmail.com</p>
+               <p>📞Teléfono: +52(633)00.00.00</p>
+            </div>
+         </div>
+         
+      </div>
+   </div>
+   <div class="copyright">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <p>© 2021 All Rights Reserved. <a href="https://html.design/">Angel Guardado</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+  
+  
+{% endblock %}
 
-
- {% endblock %}

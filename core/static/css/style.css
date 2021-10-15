@@ -439,7 +439,7 @@ margin: 10px 0 0 10px;
 
 .titlepage h2 {
      font-size: 45px;
-     color: #0c0f38;
+     color:#184d89;
      line-height: 40px;
      font-weight: bold;
      padding: 0;
@@ -586,6 +586,12 @@ margin: 10px 0 0 10px;
      background: #ffff;
      font-family: Poppins;
 }
+.span {
+     color: #184d89;
+     font-size: 35px;
+     line-height: 35px;
+     font-weight: bold;
+}
 
 .why .titlepage {
      text-align: center;
@@ -596,14 +602,14 @@ margin: 10px 0 0 10px;
 }
 
 .why .titlepage p {
-     color: #090808;
+     color: #184d89;
 }
 
 .why .why-box h3 {
-     padding: 20px 0px 20px 0px;
+     padding: 20px 0px 5px 0px;
      font-size: 20px;
      line-height: 25px;
-     color: #090808;
+     color: #184d89;
      display: block;
      font-weight: 500;
 }
@@ -619,7 +625,7 @@ margin: 10px 0 0 10px;
 }
 
 .why .why-box p {
-     font-size: 16px;
+     font-size: 14px;
      line-height: 24px;
      color: #090808;
 }
@@ -641,6 +647,15 @@ margin: 10px 0 0 10px;
      text-align: center;
      margin: 0 auto;
      margin-top: 20px;
+}
+.indicador{
+    padding: 5px 0px 5px 0px;
+    font-size: 17px;
+    line-height: 25px;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-weight: 500;
+    font-weight: bolder;
 }
 
 .bg:hover {
@@ -1011,7 +1026,7 @@ h2 small {
 }
 
 body {
-	background-color: #28223F;
+	background-color: #184d89;
 	font-family: Montserrat, sans-serif;
 	
 	display: flex;

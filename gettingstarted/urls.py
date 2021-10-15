@@ -16,7 +16,7 @@ from django.contrib import admin
 
 #views de nuestras apps
 from core import views
-from ensayo.views import  editar_ensayo, lista_ensayo, vista_ensayo, alizar
+from ensayo.views import  editar_ensayo, lista_ensayo, vista_ensayo, save, eliminar_ensayo
 #from ensayo.views import EnsayoCreate
 
 
@@ -32,18 +32,18 @@ from ensayo.views import  editar_ensayo, lista_ensayo, vista_ensayo, alizar
 
 urlpatterns = [
       path("", views.home, name="home"),
-      #path("ensayo", EnsayoCreate.as_view(), name="ensayo"),
       path("admin/", admin.site.urls),
       path("registro", views.UsuarioRegistro.as_view(), name='registro'),
       path('accounts/', include('django.contrib.auth.urls')),
       #path('', include('social_django.urls', namespace='social')),
       path("ensayo/", login_required(vista_ensayo), name='ensayo' ),
+      path("save/", login_required(save), name='save' ),
       path("ensayos/",login_required(lista_ensayo), name='ensayos'),
-      re_path("miperfil/(?P<pk>\d+)/",login_required(views.editar_usuario.as_view()), name='miperfil'),
-      #re_path("editar/(?P<id_ensayo>\d+)/", editar_ensayo, name='editar_ensayo'),
-      path("editarusuario/<int:id_ensayo>", editar_ensayo, name='editar_ensayo'),
-     # path("analizarensayo/<int:id_ensayo>", alizar, name='analizar_ensayo'),
-      path("analizarensayo/", alizar, name='analizar_ensayo'),
+   #   re_path("miperfil",login_required(views.miperfil), name='miperfil'),
+      re_path("editar/(?P<id_ensayo>\d+)/", editar_ensayo, name='editar_ensayo'),
+      re_path("eliminar/(?P<id_ensayo>\d+)/", eliminar_ensayo, name='eliminar_ensayo'),
+      path("miperfil/", login_required(views.miperfil), name='miperfil'),
+      path("eliminar_usuario/", login_required(views.eliminar_usuario), name='eliminar_usuario'),
       
 ]
  
