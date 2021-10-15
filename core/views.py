@@ -1,4 +1,5 @@
-from tkinter.constants import FALSE, NO, NONE
+import tkinter
+root = tkinter.Tk()
 from django import forms
 from django.db.models.base import Model
 from django.urls.resolvers import get_resolver
